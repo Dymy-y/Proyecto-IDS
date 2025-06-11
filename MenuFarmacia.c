@@ -19,16 +19,20 @@ int main() {
 
         switch (opcion) {
             case 1:
-                darAlta(productos, &numProductos);
+                // darAlta(productos, &numProductos);
+                printf("Función alta producto no implementada aún.\n");
                 break;
             case 2:
-                buscarProducto(productos, numProductos);
+                // buscarProducto(productos, numProductos);
+                printf("Función buscar producto no implementada aún.\n");
                 break;
             case 3:
-                modificarProducto(productos, numProductos);
+                // modificarProducto(productos, numProductos);
+                printf("Función modificar producto no implementada aún.\n");
                 break;
             case 4:
-                eliminarProducto(productos, &numProductos);
+                // eliminarProducto(productos, &numProductos);
+                printf("Función eliminar producto no implementada aún.\n");
                 break;
             case 5:
                 printf("Saliendo del programa...\n");
@@ -40,4 +44,3 @@ int main() {
 
     return 0;
 }
-
