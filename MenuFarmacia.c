@@ -1,5 +1,29 @@
 #include <stdio.h>
-#include "productos.h"
+#include <string.h>
+#define MAX_PRODUCTOS 100
+
+struct Producto {
+    int id;
+    char nombre[50];
+    float precio;
+};
+
+// Función Buscar
+void buscarProducto(struct Producto productos[], int numProductos) {
+    int id;
+    printf("Ingrese el ID del producto a buscar: ");
+    scanf("%d", &id);
+
+    for (int i = 0; i < numProductos; i++) {
+        if (productos[i].id == id) {
+            printf("🔎 Producto encontrado:\n");
+            printf("ID: %d\nNombre: %s\nPrecio: %.2f\n", productos[i].id, productos[i].nombre, productos[i].precio);
+            return;
+        }
+    }
+
+    printf("❌ Producto no encontrado.\n");
+}
 
 int main() {
     struct Producto productos[MAX_PRODUCTOS];
@@ -22,9 +46,9 @@ int main() {
                 // darAlta(productos, &numProductos);
                 printf("Función alta producto no implementada aún.\n");
                 break;
+                
             case 2:
-                // buscarProducto(productos, numProductos);
-                printf("Función buscar producto no implementada aún.\n");
+                buscarProducto(productos, numProductos);
                 break;
             case 3:
                 // modificarProducto(productos, numProductos);
