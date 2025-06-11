@@ -25,6 +25,7 @@ void buscarProducto(struct Producto productos[], int numProductos) {
     printf("❌ Producto no encontrado.\n");
 }
 
+
 int main() {
     struct Producto productos[MAX_PRODUCTOS];
     int numProductos = 0;
